@@ -1,11 +1,5 @@
 # Assignment 3
 
-Due Date: 5/4, 2:00 PM
-
-**Name:** FILL IN
-
-**Email:** FILL IN
-
 ## Getting started
 Instructions for the tasks are included in the jupyter notebook, run `jupyter
 notebook` once you have setup your environment.
@@ -17,10 +11,11 @@ Download anaconda from [here](https://www.anaconda.com/download/), and then you 
 
 On Linux this looks like:
 ```bash
-curl -O 'https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh'
-bash Anaconda3-5.0.1-Linux-x86_64.sh
+curl -O 'https://repo.anaconda.com/archive/Anaconda3-2018.12-Linux-x86_64.sh'
+bash Anaconda3-2018.12-Linux-x86_64.sh
 source ~/anaconda3/bin/activate
 conda install pytorch-cpu -c pytorch
+pip install --upgrade 'git+https://github.com/matthewfl/openfst-wrapper.git'
 jupyter notebook
 ```
 ### Using an ugrad machine
@@ -31,11 +26,12 @@ instructions:
 ```bash
 # replace 1234 with your favorite number
 ssh USERNAME@ugrad10.cs.jhu.edu -L 1234:localhost:1234
-curl -O 'https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh'
-bash Anaconda3-5.0.1-Linux-x86_64.sh
+curl -O 'https://repo.anaconda.com/archive/Anaconda3-2018.12-Linux-x86_64.sh'
+bash Anaconda3-2018.12-Linux-x86_64.sh
 bash
 source ~/anaconda3/bin/activate
 conda install pytorch-cpu -c pytorch
+pip install --upgrade 'git+https://github.com/matthewfl/openfst-wrapper.git'
 jupyter notebook --ip=127.0.0.1 --port=1234 --no-browser
 ```
 Now open your web browser to `http://localhost:1234` and you should see the jupyter notebook login screen.
@@ -50,9 +46,4 @@ to login with a token:
   1. Make sure that you have completed all parts of the assignment
   2. In the Jupyter notebook click **Kernel > Restart & Run all** to generate the output for all cells
   3. Save the notebook *with* the output from all the cells in the notebook **File > Save and Checkpoint**
-  4. Put your name in README.md
-  5. Create a git commit and push it to your private repo
-     1. `git add .`
-     2. `git commit -m 'done with assignment 3 !!!'`
-     3. `git push`
-  6. Check your submission at `https://github.com/seq2class/sp18-assignment3-YOUR_USERNAME`
+  4. Upload the .ipynb file to Piazza (you should not need to upload anything else for this assignment)
